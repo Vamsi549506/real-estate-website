@@ -92,3 +92,14 @@ body {
 .area-card h5 {
   color: var(--navy);
 }
+/* ===== Inner page header (Listings, Analytics, About) ===== */
+.page-header {
+  background-color: var(--navy);
+}
+
+/* ===== White content panels ===== */
+.panel {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
