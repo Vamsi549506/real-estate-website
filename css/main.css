@@ -1,47 +1,94 @@
-/**
-Sample css code
-*/
-/* Set height to 100% for body and html to enable the background image to cover the whole page: */
-body,
-html {
-  height: 100%;
+/* ===== Color variables (change once, updates the whole site) ===== */
+:root {
+  --navy: #0b2545;
+  --gold: #c9a227;
+  --light-bg: #f5f7fa;
 }
 
-/*Set background image*/
-.container {
-  background-image: url('https://doc-10-ao-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/r085o9ungppbiokopob2sfbekae4uqbb/1537920000000/14802840322886517493/*/110cT8sl-pOiHGgj9yToPkAqAzrr-RNfb');
-  height: 100%;
-  background-position: center;
+body {
+  background-color: var(--light-bg);
+}
+
+/* Menu bar */
+.bg-navy {
+  background-color: var(--navy);
+}
+.navbar .nav-link.active {
+  color: var(--gold) !important;
+  font-weight: 600;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--navy);
+  color: #ffffff;
+}
+.site-footer a {
+  color: var(--gold);
+}
+
+/* ===== Hero banner ===== */
+.hero {
+  min-height: 70vh;
+  background-color: var(--navy);
+  background-image: linear-gradient(rgba(11, 37, 69, 0.65), rgba(11, 37, 69, 0.65)),
+                    url('../img/hero.jpg');
   background-size: cover;
+  background-position: center;
 }
 
-/* Position text in the middle */
-.middle {
-  position: absolute;
-  color: beige;
-  top: 70%;
-  left: 39%;
-  text-align: center;
-  font-size: 25px;
+/* Gold button */
+.btn-gold {
+  background-color: var(--gold);
+  color: var(--navy);
+  font-weight: 600;
+  border: none;
+}
+.btn-gold:hover {
+  background-color: #b08d1f;
+  color: #ffffff;
 }
 
-/*Set circle in unordered list*/
-.middle ul {
-  list-style-type: circle;
+/* ===== Quick stat boxes ===== */
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.25rem;
+}
+.stat-label {
+  color: #6c757d;
+  margin-bottom: 0;
+}
+/* ===== Featured property cards ===== */
+.property-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.property-card img {
+  height: 200px;
+  object-fit: cover;
 }
 
-/*Set text inside li tag to left*/
-.middle ul li {
-  text-align: left !important;
+/* ===== Neighborhood boxes ===== */
+.area-card {
+  background-color: #ffffff;
+  border-left: 4px solid var(--gold);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
-
-/*Set text color for a tag inside middle class and ul>li element*/
-.middle ul li a {
-  color: beige;
-}
-
-/*Change text color and decoration for a tags inside middle class and ul>li element*/
-.middle ul li a:hover {
-  color: red;
-  text-decoration: none;
+.area-card h5 {
+  color: var(--navy);
 }
